@@ -45,10 +45,10 @@ CELERY_DISABLE_RATE_LIMITS  = True
 CELERY_SEND_TASK_ERROR_EMAILS = True
 
 
-# CELERYBEAT_SCHEDULE = {
-#     'refresh_google_alerts': {
-#         'task':     'refresh_google_alerts',
-#         "schedule"    : timedelta(seconds=60*60*24),
-#         'options'    : {'queue': 'beat_tasks' },
-#     },
-# }
+CELERYBEAT_SCHEDULE = {
+    'pull_emails': {
+        'task':     'pull_emails',
+        "schedule"    : timedelta(seconds=60*60*24),
+        'options'    : {'queue': 'email_queue' },
+    },
+}

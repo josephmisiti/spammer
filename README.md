@@ -89,5 +89,16 @@ spammer=# SELECT COUNT(*) from emails;
 -------
  21139
 (1 row)
+```
 
+If you setup a celery queue, the project is setup to run a cron-job every 24 hours
+
+```
+CELERYBEAT_SCHEDULE = {
+    'pull_emails': {
+        'task':     'pull_emails',
+        "schedule"    : timedelta(seconds=60*60*24),
+        'options'    : {'queue': 'email_queue' },
+    },
+}
 ```

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+npm install -g yuglify
+npm install -g uglify-js

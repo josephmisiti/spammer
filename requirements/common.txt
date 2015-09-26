@@ -1,0 +1,22 @@
+Django<1.8
+
+# Databases
+psycopg2==2.5.4
+django-model-utils==2.0.3
+django-pgfields==1.4.4
+djorm-pgarray==1.0
+django-jsonfield
+django-localflavor==1.0
+
+# aysnc
+django-celery==3.1.10
+django-extensions==1.3.2
+djangorestframework-jwt==1.0.1
+djangorestframework==2.4.2
+django-impersonate
+django-filter
+
+# deployment
+django-pipeline==1.5.1
+whitenoise==2.0.1
+dj_database_url

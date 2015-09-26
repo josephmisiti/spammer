@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# This script starts the non-periodc queues only
+#
+# python manage.py celery purge -f
+# python manage.py celery worker --autoreload --time-limit=99999 -c 2 --loglevel=INFO -Q processing_queue,photos_queue,email_queue

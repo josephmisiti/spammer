@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# This script starts a periodc queue only
+#
+# python manage.py celeryd --time-limit=99999 -c 1 --loglevel=DEBUG -v 2 -B -Q beat_tasks --scheduler=djcelery.schedulers.DatabaseScheduler

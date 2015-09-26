@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# restore development database on mongolab http://docs.mongolab.com/backups/
+
+MONGO_HOST="ds043952.mongolab.com:43952"
+MONGO_DB="heroku_52wgkc5h"
+MONGO_USERNAME="baxter"
+MONGO_PASSWORD="baxter"
+
+tar xvf data/tests.tar.tgz
+mongorestore -h $MONGO_HOST -d $MONGO_DB -u $MONGO_USERNAME -p $MONGO_PASSWORD tests/*
+rm -rf tests/

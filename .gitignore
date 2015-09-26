@@ -1,3 +1,4 @@
+spammer/local_settings.py
 *.pyc
 *.txt
 *.db

@@ -48,6 +48,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+
 ROOT_URLCONF = 'spammer.urls'
 
 WSGI_APPLICATION = 'spammer.wsgi.application'
@@ -183,3 +184,9 @@ else:
             'PORT'		: '5432',
         }
     }
+    
+    
+TWITTER_APP_KEY = 'xxxx'
+TWITTER_APP_KEY_SECRET = 'xxxx'
+TWITTER_ACCESS_TOKEN = 'xxxx'
+TWITTER_ACCESS_TOKEN_SECRET = 'xxxx'

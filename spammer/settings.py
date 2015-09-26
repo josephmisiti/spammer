@@ -96,7 +96,12 @@ PIPELINE_DISABLE_WRAPPER = True
 
 AUTH_USER_MODEL = 'accounts.User'
 
-# configs
+TWITTER_APP_KEY = 'xxxx'
+TWITTER_APP_KEY_SECRET = 'xxxx'
+TWITTER_ACCESS_TOKEN = 'xxxx'
+TWITTER_ACCESS_TOKEN_SECRET = 'xxxx'
+
+from celery_config import *
 from .pipeline_configs import *
 
 
@@ -185,10 +190,7 @@ else:
         }
     }
     
+    for logger in LOGGING['loggers']:
+            LOGGING['loggers'][logger]['handlers'] = ['console']
     
-TWITTER_APP_KEY = 'xxxx'
-TWITTER_APP_KEY_SECRET = 'xxxx'
-TWITTER_ACCESS_TOKEN = 'xxxx'
-TWITTER_ACCESS_TOKEN_SECRET = 'xxxx'
 
-from celery_config import *

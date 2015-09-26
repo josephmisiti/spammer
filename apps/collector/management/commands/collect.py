@@ -11,4 +11,5 @@ class Command(BaseCommand):
         
         #pull_emails_from_url()
         settings.CELERY_ALWAYS_EAGER = True
+        settings.CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
         pull_emails.apply_async(kwargs={}, queue='email_queue')

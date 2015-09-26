@@ -169,7 +169,7 @@ LOGGING = {
         },
     }
 }
-        
+      
 if not DEBUG:
     DATABASES={}
     DATABASES['default'] =  dj_database_url.config()
@@ -190,3 +190,5 @@ TWITTER_APP_KEY = 'xxxx'
 TWITTER_APP_KEY_SECRET = 'xxxx'
 TWITTER_ACCESS_TOKEN = 'xxxx'
 TWITTER_ACCESS_TOKEN_SECRET = 'xxxx'
+
+from celery_config import *
